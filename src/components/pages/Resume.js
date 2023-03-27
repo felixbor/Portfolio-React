@@ -1,11 +1,11 @@
 import React from 'react';
-
+import MyResume from '../../assets/FeliksBorshchevskyi.docx'
 export default function Resume() {
   return (
     <div className="resume" style={{backgroundImage:`url("https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixid=Mnw0MDkzODR8MHwxfHNlYXJjaHw0fHx0ZWNofGVufDB8fHx8MTY3OTk0MDkyNg&ixlib=rb-4.0.3")`,
     backgroundSize: "cover"}}>
       <h1>Resume</h1>
-      <a href="https://www.linkedin.com/in/feliks-borshchevskyi-25325826a/" > Download my resume</a>
+       <a href={MyResume} download="FeliksBorshchevskyi.docx">Press here to Download Resume</a>
       <div>
         <p className='skills'>Front-end Skills</p>
       <ul  > 
