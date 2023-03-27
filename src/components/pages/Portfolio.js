@@ -6,18 +6,23 @@ import jate from "./images/Jate.jpg";
 import NoteTaker from "./images/NoteTaker.jpg";
 export default function Portfolio() {
   const projects = [
-    { link: "https://expertise-fx.herokuapp.com/", alt: " Expertise app" },
+    { link: "https://expertise-fx.herokuapp.com/",
+     alt: " Expertise app" ,
+     image:  expertise },
     {
       link: "https://felixbor.github.io/BoozFlix-FunApp/",
-      alt: " BoozFlix app"
+      alt: " BoozFlix app",
+      image:  boozflix  },
+    {
+      link: "https://feliks-text-editor-pwa.herokuapp.com/",
+      alt: " Text Editor PWA",
+      image:  jate
     },
     {
       link: "https://feliks-text-editor-pwa.herokuapp.com/",
       alt: " Text Editor PWA",
-    },
-    {
-      link: "https://feliks-text-editor-pwa.herokuapp.com/",
-      alt: " Text Editor PWA",
+      image:  NoteTaker
+
     }
   ];
 
@@ -29,11 +34,9 @@ export default function Portfolio() {
 
     >
 <div className="PortfolioCards">
-      <Project link={projects[0].link}  alt={projects[0].alt} image={expertise}/>
-      <Project link={projects[1].link} alt={projects[1].alt} image={boozflix} />
-      <Project link={projects[2].link} alt={projects[2].alt} image={jate} />
-      <Project link={projects[3].link} alt={projects[3].alt} image={NoteTaker}
-      />
+   {projects.map(project =>{return<Project link={project.link}  alt={project.alt} image={project.image}/>})}
+      
+     
       </div>
     </div>
   );

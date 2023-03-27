@@ -6,9 +6,7 @@ import React from 'react';
 // We assign them to their own variable names
 function NavBar({ currentPage, handlePageChange }) {
   return (
-    <header style={{backgroundImage:`url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixid=Mnw0MDkzODR8MHwxfHNlYXJjaHwyfHxjb2RlfGVufDB8fHx8MTY3OTc4MDAyNQ&ixlib=rb-4.0.3")`,
-                    backgroundSize: "cover"}}>
-  <h1>Borshchevskyi Feliks</h1>
+   
     <nav className='Nav'> 
      
         <a
@@ -47,7 +45,7 @@ function NavBar({ currentPage, handlePageChange }) {
           Contact</a>
            
      </nav> 
-     </header>
+    
  );
 }
 

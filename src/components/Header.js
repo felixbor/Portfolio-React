@@ -25,14 +25,20 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-   <div>
+    <>
+   <header style={{backgroundImage:`url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixid=Mnw0MDkzODR8MHwxfHNlYXJjaHwyfHxjb2RlfGVufDB8fHx8MTY3OTc4MDAyNQ&ixlib=rb-4.0.3")`,
+   backgroundSize: "cover"}}>
+    <h1>Borshchevskyi Feliks</h1>
    
  
       {/* We are passing the currentPage from state and the function to update it */}
       <NavBar  className='Nav' currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
-       {renderPage()}
+       
    
-   </div>
+  
+   </header>
+   
+   {renderPage()}</>
   );
 }
