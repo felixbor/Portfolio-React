@@ -58,7 +58,7 @@ export default function Contact() {
     <div
       className="ContactForm"
       style={{
-        backgroundImage: `url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixid=Mnw0MDkzODR8MHwxfHNlYXJjaHwyfHxjb2RlfGVufDB8fHx8MTY3OTc4MDAyNQ&ixlib=rb-4.0.3")`,
+        backgroundImage: `url("https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixid=Mnw0MDkzODR8MHwxfHNlYXJjaHw0fHx0ZWNofGVufDB8fHx8MTY3OTk0MDkyNg&ixlib=rb-4.0.3")`,
         backgroundSize: "cover",
       }}
     >
@@ -66,6 +66,7 @@ export default function Contact() {
       <form className="form" onSubmit={submitHandler}>
         <p>Contact Me</p>
         <div>
+          <label>Name</label>
         <input
           value={enteredName}
           name="Name"
@@ -75,6 +76,7 @@ export default function Contact() {
         />
         </div>
         <div>
+        <label>Email</label>
         <input
           value={enteredEmail}
           name="email"
@@ -84,6 +86,7 @@ export default function Contact() {
         />
         </div>
         <div>
+        <label>Message</label>
         <input className="message"
           value={enteredMessage}
           onChange={messsageChangeHandler}
