@@ -1,50 +1,43 @@
 import React from 'react';
-import expertise from "./expertise.JPG"
+import expertise from "./images/expertise.JPG"
 import boozflix from "./images/boozflix.JPG"
-
-
+import Project from "./Project"
+import jate from "./images/Jate.jpg"
 export default function Portfolio() {
+const projects=[
+  { link:"https://expertise-fx.herokuapp.com/",
+    alt:" Expertise app"
+},
+{link:"https://felixbor.github.io/BoozFlix-FunApp/",
+alt:" BoozFlix app"
+},
+{link:"https://feliks-text-editor-pwa.herokuapp.com/",
+alt:" Text Editor PWA"
+}
+]
+
   return (
-    <div style={{backgroundImage:`url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixid=Mnw0MDkzODR8MHwxfHNlYXJjaHwyfHxjb2RlfGVufDB8fHx8MTY3OTc4MDAyNQ&ixlib=rb-4.0.3")`,
+    <div className="Portfolio" style={{backgroundImage:`url("https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixid=Mnw0MDkzODR8MHwxfHNlYXJjaHwyfHxjb2RlfGVufDB8fHx8MTY3OTc4MDAyNQ&ixlib=rb-4.0.3")`,
     backgroundSize: "cover"
     }}>
-       <section id="projects">
-    <p >Take a look at recent projects</p>
-
-    <div class="cards"> 
+       
+ <Project  link={projects[0].link}  alt ={projects[0].alt} image={expertise}/>
+ <Project  link={projects[1].link}  alt ={projects[1].alt} image={boozflix}/>
+ <Project  link={projects[2].link}  alt ={projects[2].alt} image={jate}/>
+ <Project  link={projects[0].link}  alt ={projects[0].alt} image={expertise}/>
+    {/* <div className="cards"> 
       <div class="container">
           <a href="https://expertise-fx.herokuapp.com/"> <img class="project" src={expertise} alt=" html CSS Java script intoduction"></img></a>
           <form action="https://expertise-fx.herokuapp.com/">
           <button class="btn" type="submit">  Expertise </button>
          </form>
-       </div>
+       </div> */}
   
  
-      <div class="container">
-           <a href="https://felixbor.github.io/web-accesibility/"> <img class="project" src="./assets/images/SEO-ELEMENTS.JPG.png" alt=" Seo properties of HTML project"></img></a>
-           <form action="https://felixbor.github.io/web-accesibility/">
-            <button class="btn" type="submit">  SEO properties of HTML </button>
-         </form>
-    </div>
-
-     
-       <div class="container">
-       <a href="https://felixbor.github.io/CSS-project/"> <img class="project" src="./assets/images/CSS- Snippet.JPG.png" alt="  CSS Cheat Snippet"></img></a>
-       <form action="https://felixbor.github.io/CSS-project/">
-       <button class="btn" type="submit">  CSS Cheat Snippet </button>
-       </form>
-    </div>
-
     
-      <div class="container">
-      <a href="https://felixbor.github.io/BoozFlix-FunApp/"> <img class="project" src={boozflix} alt=" green grass with a spider on it"></img></a>
-      <form action="#">
-      <button class="btn" type="submit"> BoozFlix </button>
-    </form>
-    </div>
-  </div>
-</section>
-
-    </div>
+    
+    </div > 
+     
+    
   );
 }

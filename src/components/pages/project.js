@@ -1,6 +1,6 @@
 import React from 'react';
-import expertise from "./expertise.JPG"
-import boozflix from "./images/boozflix.JPG"
+//import expertise from "./expertise.JPG"
+//import boozflix from "./images/boozflix.JPG"
 
 
 export default function Project(props) {
@@ -10,11 +10,8 @@ export default function Project(props) {
     
 
    
-      <div class="container">
-          <a href="https://expertise-fx.herokuapp.com/"> <img className="project" src={d} alt=" html CSS Java script intoduction"></img></a>
-          <form action="https://expertise-fx.herokuapp.com/">
-          <button class="btn" type="submit">  Expertise </button>
-         </form>
+      <div className="container">
+          <a href={props.link}> <img className="project" src={props.image} alt=" html CSS Java script intoduction"></img></a>
        </div>
   
  
